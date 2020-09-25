@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e94fddbd-5840-4a75-82be-0fd39729aafa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msvc/dll/64/SDL2.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msvc/dll/86/SDL2.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msvc/lib/64/SDL2.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msvc/lib/64/SDL2main.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msvc/lib/64/SDL2test.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msvc/lib/86/SDL2.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msvc/lib/86/SDL2main.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msvc/lib/86/SDL2test.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bullets.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/f.rs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="1h4eft27" />
+  </component>
+  <component name="ProjectId" id="1h4rV5ZZf9qKGRi51k8cRZXEy7O" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="org.rust.disableDetachedFileInspectionC:/Users/jakub/Documents/programming/rust/src/ggl/build.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspectionC:/Users/jakub/Documents/programming/rust/src/ggl/lib/gl/bindings.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspectionC:/Users/jakub/Documents/programming/rust/src/ggl/lib/gl/build.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspectionC:/Users/jakub/Documents/programming/rust/src/ggl/lib/gl/src/lib.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspectionC:/Users/jakub/Documents/programming/rust/src/ggl/src/gl_render.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspectionC:/Users/jakub/Documents/programming/rust/src/ggl/src/global.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspectionC:/Users/jakub/Documents/programming/rust/src/ggl/src/h.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspectionC:/Users/jakub/Documents/programming/rust/src/ggl/src/main.rs" value="true" />
+    <property name="org.rust.hideNoCargoProjectNotificationsC:/Users/jakub/Documents/programming/rust/src/ggl/lib/gl/Cargo.toml" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jakub\Documents\programming\rust\src\ggl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cargo Command.Run ggl">
+    <configuration name="Run ggl" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="run --package ggl --bin ggl" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test mat::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package ggl --bin ggl mat::tests" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test mat::tests::prj_test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package ggl --bin ggl mat::tests::prj_test -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test vect" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package ggl --bin ggl vect" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test vect::tests::inline_test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package ggl --bin ggl vect::tests::inline_test -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo Command.Run ggl" />
+        <item itemvalue="Cargo Command.Test mat::tests::prj_test" />
+        <item itemvalue="Cargo Command.Test mat::tests" />
+        <item itemvalue="Cargo Command.Test vect::tests::inline_test" />
+        <item itemvalue="Cargo Command.Test vect" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e94fddbd-5840-4a75-82be-0fd39729aafa" name="Default Changelist" comment="" />
+      <created>1599281225739</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599281225739</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1599942251553">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1599942251553" />
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599937151996">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1599937151996" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1601060658687">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1601060658687" />
+    <state width="1323" height="286" key="GridCell.Tab.0.bottom" timestamp="1601060659883">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="286" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1601060659883" />
+    <state width="1323" height="286" key="GridCell.Tab.0.center" timestamp="1601060659882">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="286" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1601060659882" />
+    <state width="1323" height="286" key="GridCell.Tab.0.left" timestamp="1601060659882">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="286" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1601060659882" />
+    <state width="1323" height="286" key="GridCell.Tab.0.right" timestamp="1601060659882">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="286" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1601060659882" />
+    <state x="390" y="102" width="585" height="534" key="find.popup" timestamp="1599744558898">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="390" y="102" width="585" height="534" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1599744558898" />
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1600629352474">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1600629352474" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1599574557927">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1599574557927" />
+  </component>
+</project>
