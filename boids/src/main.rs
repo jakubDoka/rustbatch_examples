@@ -24,24 +24,37 @@ struct Engine {
     col2: Vec<usize>,
 }
 
+const REPEL_COF: f32 = 7.5f32;
+const ALIGN_COF: f32 = 0.045f32;
+const COHESION_COF: f32 = 0.03f32;
+const SPEED_LIMITS: (f32, f32) = (25.0f32, 150.0f32);
+const SIGHT: f32 = 20f32;
+
 impl Engine {
     pub fn update(&mut self, b: &mut Batch, s: &mut Sprite, delta: f32) {
         for i in 0..self.e.len() {
             let mut bee = replace(&mut self.e[i], None).unwrap();
+
             let mut avoidance = Vect::ZERO;
-            self.map.query_point(&bee.pos, &mut self.col2);
+
+            self.map.query_point(bee.pos, &mut self.col2);
             for b in self.col2.iter() {
-                let b = &self.e[*b as usize];
-                if b.is_none() { continue }
-                let b = b.as_ref().unwrap();
+                let b = match &self.e[*b as usize] {
+                    Some(val) => val,
+                    None => continue
+                };
+
                 let dif = b.pos - bee.pos;
                 let len = dif.len();
-                if len > 20f32 { continue }
+                if len > SIGHT { continue }
+
                 let inv = 1f32 / len.powi(2);
                 avoidance -= dif * inv;
+
                 self.col.push(b.pos);
                 self.col1.push(b.vel);
             }
+
             let alignment = Vect::average(&self.col1);
             let cohesion = Vect::average(&self.col) - bee.pos;
 
@@ -49,20 +62,22 @@ impl Engine {
             self.col1.clear();
             self.col2.clear();
 
-            bee.vel += avoidance * 7.5f32  + alignment * 0.045f32 + cohesion * 0.03f32;
-            bee.vel = bee.vel.clamped(15f32, 150f32);
+            bee.vel += avoidance * REPEL_COF  + alignment * ALIGN_COF + cohesion * COHESION_COF;
+            bee.vel = bee.vel.clamped(SPEED_LIMITS.0, SPEED_LIMITS.1);
+
             let prev = bee.pos;
 
             bee.pos += bee.vel * delta;
-            match self.bounds.respective(&bee.pos) {
+            match self.bounds.respective(bee.pos) {
                 Sides::Left => bee.pos.x = self.bounds.max.x,
                 Sides::Right => bee.pos.x = self.bounds.min.x,
                 Sides::Top => bee.pos.y = self.bounds.min.y,
                 Sides::Bottom => bee.pos.y = self.bounds.max.y,
                 _ => {},
             }
-            self.map.update(&(prev), &(bee.pos), i);
-            s.draw(b, &Mat::IM.scaled(Vect::ZERO, 0.5f32).rotated(Vect::ZERO, bee.vel.ang()).moved(bee.pos), &WHITE);
+
+            self.map.update(prev, bee.pos, i);
+            s.draw(b, bee.pos, Vect::new(0.5f32, 0.5f32), bee.vel.ang(), &WHITE);
             self.e[i] = Some(bee);
         }
     }
@@ -80,7 +95,7 @@ fn main() {
     });
 
     window.set_background_color(&[0.5f32, 0.5f32, 0.5f32, 1f32]); //gray background
-    window.set_camera(Mat::IM.moved(Vect::i64(-1000, -600)).scaled(Vect::ZERO, 0.5f32));
+    window.set_camera(Vect::i32(1000, 600), 0.5f32);
 
     // use of image crate to load image
     let img = image::open("C:/Users/jakub/Documents/programming/rust/src/rustbatch_examples/boids/src/bullets.png").unwrap();
@@ -114,12 +129,12 @@ fn main() {
 
     let mut rand = rand::thread_rng();
 
-    for i in 0..10000 {
+    for i in 0..10000{
         let bee = Bee{
             pos: Vect::new(rand.gen::<f32>() * 1000f32, rand.gen::<f32>() * 1000f32),
             vel: Vect::new(rand.gen::<f32>() * 100f32, rand.gen::<f32>() * 100f32),
         };
-        engine.map.insert(&bee.pos, i);
+        engine.map.insert(bee.pos, i);
         engine.e.push(Some(bee));
     }
 

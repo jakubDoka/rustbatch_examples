@@ -34,6 +34,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cf1de2fe8c75bc145a2f577add951f8134889b4795d47466a54a5c846d691693"
 
 [[package]]
+name = "boids"
+version = "0.1.0"
+dependencies = [
+ "rustbatch",
+]
+
+[[package]]
 name = "bytemuck"
 version = "1.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -163,13 +170,6 @@ dependencies = [
  "cfg-if",
  "libc",
  "wasi",
-]
-
-[[package]]
-name = "ggl"
-version = "0.1.0"
-dependencies = [
- "rustbatch",
 ]
 
 [[package]]
@@ -606,14 +606,13 @@ checksum = "f9ec002c35e86791825ed294b50008eea9ddfc8def4420124fbc6b08db834957"
 
 [[package]]
 name = "rustbatch"
-version = "0.1.2"
+version = "0.2.0"
 dependencies = [
  "anymap",
  "gl",
  "glm",
  "hashers",
  "image",
- "num-traits",
  "rand 0.7.3",
  "sdl2",
 ]

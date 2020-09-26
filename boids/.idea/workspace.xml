@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e94fddbd-5840-4a75-82be-0fd39729aafa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msvc/dll/64/SDL2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msvc/dll/86/SDL2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msvc/lib/64/SDL2.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msvc/lib/64/SDL2main.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msvc/lib/64/SDL2test.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msvc/lib/86/SDL2.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msvc/lib/86/SDL2main.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msvc/lib/86/SDL2test.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bullets.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/f.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jakub.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ggl.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +27,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="1h4eft27" />
   </component>
   <component name="ProjectId" id="1h4rV5ZZf9qKGRi51k8cRZXEy7O" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -168,22 +165,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1601060658687" />
-    <state width="1323" height="286" key="GridCell.Tab.0.bottom" timestamp="1601060659883">
+    <state width="1323" height="286" key="GridCell.Tab.0.bottom" timestamp="1601111071681">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1601060659883" />
-    <state width="1323" height="286" key="GridCell.Tab.0.center" timestamp="1601060659882">
+    <state width="1323" height="286" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1601111071681" />
+    <state width="1323" height="286" key="GridCell.Tab.0.center" timestamp="1601111071680">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1601060659882" />
-    <state width="1323" height="286" key="GridCell.Tab.0.left" timestamp="1601060659882">
+    <state width="1323" height="286" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1601111071680" />
+    <state width="1323" height="286" key="GridCell.Tab.0.left" timestamp="1601111071680">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1601060659882" />
-    <state width="1323" height="286" key="GridCell.Tab.0.right" timestamp="1601060659882">
+    <state width="1323" height="286" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1601111071680" />
+    <state width="1323" height="286" key="GridCell.Tab.0.right" timestamp="1601111071680">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1601060659882" />
+    <state width="1323" height="286" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1601111071680" />
     <state x="390" y="102" width="585" height="534" key="find.popup" timestamp="1599744558898">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
