@@ -3,16 +3,19 @@ extern crate rustbatch;
 use rustbatch::{sdl2, image, gl, rand, Mat};
 use rustbatch::debug::FPS;
 use rustbatch::{Window, Texture, Sprite, Batch};
-use rustbatch::WHITE;
 use rustbatch::math::vect::Vect;
-use rustbatch::entity::scanner::Scanner;
 use rustbatch::rand::Rng;
 use rustbatch::math::rect::{Rect, Sides};
 use std::mem::replace;
+use rustbatch::math::rgba::{BLACK, WHITE};
+use rustbatch::vect;
+use rustbatch::render::texture::TextureConfig;
+use rustbatch::entities::detection::quadmap::{Address, QuadMap};
 
 struct Bee {
     pos: Vect,
     vel: Vect,
+    add: Address,
 }
 
 struct Engine {
@@ -20,7 +23,7 @@ struct Engine {
     col: Vec<Vect>,
     col1: Vec<Vect>,
     bounds: Rect,
-    map: Scanner<usize>,
+    map: QuadMap<usize>,
     col2: Vec<usize>,
 }
 
@@ -32,21 +35,27 @@ const SIGHT: f32 = 20f32;
 
 impl Engine {
     pub fn update(&mut self, b: &mut Batch, s: &mut Sprite, delta: f32) {
+        let mut useless = 0;
         for i in 0..self.e.len() {
             let mut bee = replace(&mut self.e[i], None).unwrap();
 
             let mut avoidance = Vect::ZERO;
 
-            self.map.query_point(bee.pos, &mut self.col2);
+            self.map.query(Rect::cube(bee.pos, SIGHT), &mut self.col2);
             for b in self.col2.iter() {
                 let b = match &self.e[*b as usize] {
                     Some(val) => val,
-                    None => continue
+                    None => {
+                        continue
+                    }
                 };
 
                 let dif = b.pos - bee.pos;
                 let len = dif.len();
-                if len > SIGHT { continue }
+                if len > SIGHT {
+                    useless += 1;
+                    continue;
+                }
 
                 let inv = 1f32 / len.powi(2);
                 avoidance -= dif * inv;
@@ -65,8 +74,6 @@ impl Engine {
             bee.vel += avoidance * REPEL_COF  + alignment * ALIGN_COF + cohesion * COHESION_COF;
             bee.vel = bee.vel.clamped(SPEED_LIMITS.0, SPEED_LIMITS.1);
 
-            let prev = bee.pos;
-
             bee.pos += bee.vel * delta;
             match self.bounds.respective(bee.pos) {
                 Sides::Left => bee.pos.x = self.bounds.max.x,
@@ -76,7 +83,7 @@ impl Engine {
                 _ => {},
             }
 
-            self.map.update(prev, bee.pos, i);
+            bee.add = self.map.update(Rect::cube(bee.pos, 0.0), i, &bee.add);
             s.draw(b, bee.pos, Vect::new(0.5f32, 0.5f32), bee.vel.ang(), &WHITE);
             self.e[i] = Some(bee);
         }
@@ -86,7 +93,7 @@ impl Engine {
 
 fn main() {
     // creating window to draw to and event pump to read input
-    let (mut window, mut event_pump, _gl) = Window::new(|sys| {
+    let (mut window, mut event_pump, _gl, _s, _e) = Window::new(|sys| {
         sys.window("heureka", 1000, 600)
             .opengl()
             .resizable()
@@ -95,7 +102,7 @@ fn main() {
     });
 
     window.set_background_color(&[0.5f32, 0.5f32, 0.5f32, 1f32]); //gray background
-    window.set_camera(Vect::i32(1000, 600), 0.5f32);
+    window.canvas.set_camera(vect!(1000, 600), 0.5f32);
 
     // use of image crate to load image
     let img = image::open("C:/Users/jakub/Documents/programming/rust/src/rustbatch_examples/boids/src/bullets.png").unwrap();
@@ -103,38 +110,34 @@ fn main() {
     // This is wrapped opengl texture object
     let texture = Texture::from_img(
         &img,
-        gl::NEAREST, // So the pixels are drawn as they are
-        gl::RGBA // Color structure, you would use gl::RGB if your texture does not have alpha channel
+        TextureConfig::DEFAULT,
     );
 
-    // Creating sprite. Notice that sprite is just collection of points and it cannot be directly
-    // drawn to window
     let mut sprite = Sprite::new(texture.frame());
 
-    // On the other hand batch owns texture witch can be drawn to window
     let mut batch = Batch::new(texture);
 
-    // this is just a little helper
     let mut fps = FPS::new(1f32);
 
-
+    println!("{:?}", window.get_viewport_rect());
     let mut engine = Engine{
         e: vec![],
         col: vec![],
         col1: vec![],
         bounds: window.get_viewport_rect(),
-        map: Scanner::new(200, 120, Vect::i32(15, 15)),
+        map: QuadMap::new(8 ,vect!(2000, 2000)),
         col2: vec![]
     };
 
     let mut rand = rand::thread_rng();
 
     for i in 0..10000{
-        let bee = Bee{
+        let mut bee = Bee{
             pos: Vect::new(rand.gen::<f32>() * 1000f32, rand.gen::<f32>() * 1000f32),
             vel: Vect::new(rand.gen::<f32>() * 100f32, rand.gen::<f32>() * 100f32),
+            add: Address::ZERO,
         };
-        engine.map.insert(bee.pos, i);
+        bee.add = engine.map.insert(Rect::cube(bee.pos, 0.0), i);
         engine.e.push(Some(bee));
     }
 
@@ -147,25 +150,17 @@ fn main() {
             }
         }
 
-        // i hope you know how to get delta on your own but fps returns is as bonus if you supply
-        // 0f32 as delta
         let delta = fps.increase(0f32);
 
-        // clearing window
         window.clear();
 
         engine.update(&mut batch, &mut sprite, delta);
 
+        batch.draw(&mut window.canvas);
 
-
-
-        window.draw(&batch);
-
-        // Don't forget to clear batch if you not planning to use it as canvas
-        // after all drawing sprites to batch takes some time
         batch.clear();
 
-        // finishing with window update so you can se it changing
         window.update();
     }
 }
+

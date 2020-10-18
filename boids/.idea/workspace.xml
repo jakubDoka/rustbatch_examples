@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e94fddbd-5840-4a75-82be-0fd39729aafa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jakub.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ggl.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +56,7 @@
       <recent name="C:\Users\jakub\Documents\programming\rust\src\ggl" />
     </key>
   </component>
-  <component name="RunManager" selected="Cargo Command.Run ggl">
+  <component name="RunManager" selected="Cargo.rel">
     <configuration name="Run ggl" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package ggl --bin ggl" />
@@ -122,15 +117,39 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Cargo Command.Run ggl" />
-        <item itemvalue="Cargo Command.Test mat::tests::prj_test" />
-        <item itemvalue="Cargo Command.Test mat::tests" />
-        <item itemvalue="Cargo Command.Test vect::tests::inline_test" />
-        <item itemvalue="Cargo Command.Test vect" />
-      </list>
-    </recent_temporary>
+    <configuration name="rel" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="run --release" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ren" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="run" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Cargo.rel" />
+      <item itemvalue="Cargo.ren" />
+      <item itemvalue="Cargo.Run ggl" />
+      <item itemvalue="Cargo.Test mat::tests" />
+      <item itemvalue="Cargo.Test mat::tests::prj_test" />
+      <item itemvalue="Cargo.Test vect" />
+      <item itemvalue="Cargo.Test vect::tests::inline_test" />
+    </list>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -153,6 +172,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601923038409">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1601923038409" />
     <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1599942251553">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -165,30 +188,30 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1601060658687" />
-    <state width="1323" height="286" key="GridCell.Tab.0.bottom" timestamp="1601111071681">
+    <state width="1306" height="293" key="GridCell.Tab.0.bottom" timestamp="1603043917681">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1601111071681" />
-    <state width="1323" height="286" key="GridCell.Tab.0.center" timestamp="1601111071680">
+    <state width="1306" height="293" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603043917681" />
+    <state width="1306" height="293" key="GridCell.Tab.0.center" timestamp="1603043917681">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1601111071680" />
-    <state width="1323" height="286" key="GridCell.Tab.0.left" timestamp="1601111071680">
+    <state width="1306" height="293" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603043917681" />
+    <state width="1306" height="293" key="GridCell.Tab.0.left" timestamp="1603043917681">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1601111071680" />
-    <state width="1323" height="286" key="GridCell.Tab.0.right" timestamp="1601111071680">
+    <state width="1306" height="293" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603043917680" />
+    <state width="1306" height="293" key="GridCell.Tab.0.right" timestamp="1603043917681">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1601111071680" />
+    <state width="1306" height="293" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603043917681" />
     <state x="390" y="102" width="585" height="534" key="find.popup" timestamp="1599744558898">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="390" y="102" width="585" height="534" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1599744558898" />
-    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1600629352474">
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1603043869596">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1600629352474" />
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1603043869596" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1599574557927">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
